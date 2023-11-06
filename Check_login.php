@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
 require 'Login.php';
 
@@ -8,10 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = new Login('localhost', 'mydatabase', 'root', '');
 
     if ($login->authenticate($username, $password)) {
-        echo "Login successful!";
+        echo '<p>Login successful!</p>'; 
         // Redirect or set session variable here
     } else {
-        echo "Login failed!";
+        echo '<p>Login failed!</p>';
     }
 }
 ?>
